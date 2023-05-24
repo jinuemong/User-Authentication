@@ -1,3 +1,18 @@
 from django.db import models
+from datetime import datetime,timedelta
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.db.models.fields import BooleanField
+from .manager import UserManageer
+class User(AbstractBaseUser,PermissionsMixin):
+    username = models.CharField(max_length=255,unique=True,db_column="username")
+    is_active = BooleanField(default=True)
+    is_staff = BooleanField(default=True)
 
-# Create your models here.
+    USERNAME_FIELD = "username" #Log in ID
+
+    objects = UserManageer()
+
+    def __str__(self):
+        return self.username
+    
+    
