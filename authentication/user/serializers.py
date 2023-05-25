@@ -32,7 +32,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 # Login
 # get username + password 
 class LoginSerializer(serializers.Serializer):
-    username = serializers.CharField(max_lenght = 64)
+    username = serializers.CharField(max_length = 64)
     password = serializers.CharField(max_length = 64, write_only = True)
     last_login = serializers.CharField(max_length = 128, read_only = True)
 
