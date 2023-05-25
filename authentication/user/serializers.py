@@ -85,14 +85,14 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        field = [
+        fields = [
             'username',
             'password',
             'token'
         ]
 
         # token : read_only_fields, no entry
-        read_only_fields= ('token')
+        read_only_fields= ('token',)
 
     # user update function
     def update(self,instance,validated_data):

@@ -34,7 +34,7 @@ THIRD_PARTIES = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'rest_framework.authtoken',
-
+    'drf_yasg', # drf yasg (for swagger ui)
 ]
 
 # Application definition
