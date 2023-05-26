@@ -27,6 +27,6 @@ class UserJsonRenderer(JSONRenderer):
             data['token'] = token.decode('utf-8') # charset
 
         # date into user key -> return
-        return json.dump({
+        return json.dumps({
             'user':data
         })

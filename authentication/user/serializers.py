@@ -88,11 +88,11 @@ class UserSerializer(serializers.ModelSerializer):
         fields = [
             'username',
             'password',
-            'token'
+            # 'token'
         ]
 
-        # token : read_only_fields, no entry
-        read_only_fields= ('token',)
+        # # token : read_only_fields, no entry
+        # read_only_fields= ('token',)
 
     # user update function
     def update(self,instance,validated_data):
